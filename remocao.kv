@@ -1,0 +1,21 @@
+<Tarefas>:
+    BoxLayout:
+        id: box
+        orientation:'vertical'
+        size_hint_y: None
+        height: self.minimum_height
+
+<Tarefa>:
+    size_hint_y:None
+    height: 100
+    Label:
+        id: label
+        font_size: 30
+    Button: 
+        text: 'X'
+        size_hint_y: None
+        width: 60
+        #root -> referência ao widget principal (nesse caso, Tarefa)
+        #app -> referência ao widget principal do aplicativo, ou seja, Tarefas
+        #self.parent = root -> são a mesma coisa
+        on_release: app.root.ids.box.remove_widget(root)

@@ -1,0 +1,12 @@
+#cria o layout e as regras dos widget
+
+<Incrementador>:
+    orientation: 'vertical'
+    Label: 
+        id: label
+        text: '1'
+        font_size: 30
+    Button:
+        text: 'incrementar'
+        font_size: 30
+        on_release: label.text = str(int(label.text)+1)  
